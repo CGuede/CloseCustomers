@@ -4,21 +4,21 @@ namespace CloseCustomers.Core
 {
     public static class ArrayHelper
     {
-        public static int[] GetIntegerArray(object[] input)
+        public static int[] GetFlatIntegerArray(object[] nestedArray)
         {
-            var output = new List<int>();
+            var flatArray = new List<int>();
 
-            for (var i = 0; i < input.Length; i++)
+            for (var i = 0; i < nestedArray.Length; i++)
             {
-                if (input[i].GetType() == typeof(int))
-                    output.Add((int)input[i]);
+                if (nestedArray[i].GetType() == typeof(int))
+                    flatArray.Add((int)nestedArray[i]);
                 else
 
-                    if (input[i].GetType() == typeof(object[]))
-                        output.AddRange(GetIntegerArray((object[])input[i]));
+                    if (nestedArray[i].GetType() == typeof(object[]))
+                        flatArray.AddRange(GetFlatIntegerArray((object[])nestedArray[i]));
             }
 
-            return output.ToArray();
+            return flatArray.ToArray();
         }
     }
 }

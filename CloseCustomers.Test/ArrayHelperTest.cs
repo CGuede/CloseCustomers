@@ -16,7 +16,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }
@@ -28,7 +28,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }
@@ -40,7 +40,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { 1, 2, 3 };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }
@@ -52,7 +52,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { 1 };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }
@@ -64,7 +64,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }
@@ -76,7 +76,7 @@ namespace CloseCustomers.Test
 
             int[] expectedOutput = { 1, 2, 4, 6, 7, 9 };
 
-            var ouput = ArrayHelper.GetIntegerArray(input);
+            var ouput = ArrayHelper.GetFlatIntegerArray(input);
 
             Assert.IsTrue(expectedOutput.SequenceEqual(ouput));
         }

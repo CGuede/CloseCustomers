@@ -7,16 +7,16 @@ namespace CloseCustomers.Core
     {
         public static List<Customer> LoadCustomersFromJson(string filePath)
         {
-            var output = new List<Customer>();
-            string json;
+            var customersList = new List<Customer>();
+            string customerJson;
             using (StreamReader r = new StreamReader(filePath))
             {
-                while ((json = r.ReadLine()) != null)
+                while ((customerJson = r.ReadLine()) != null)
                 {
-                    output.Add(JsonHelper.Deserialize<Customer>(json));
+                    customersList.Add(JsonHelper.Deserialize<Customer>(customerJson));
                 }
             }
-            return output;
+            return customersList;
         }
     }
 }
